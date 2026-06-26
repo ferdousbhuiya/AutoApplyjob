@@ -1,0 +1,116 @@
+{
+  "name": "MD FERDOUSE HOSSAIN BHUIYA",
+  "contact": {
+    "location": "Coral Springs, FL",
+    "phone": "+1 (954) 325-2242",
+    "email": "ferdousbhuiya@gmail.com",
+    "alt_email": "bhuiyam2026@fau.edu",
+    "linkedin": "linkedin.com/in/ferdousb/"
+  },
+  "summary": "Electrical Engineer with 15+ years of experience in power distribution, overhead line projects, substation operations, and industrial electrical systems. Strong background in AutoCAD, MAXIMO, GIS, preventive maintenance, and HSE compliance. Skilled in Python, SQL, Power BI, and predictive analytics for engineering decision support. Currently pursuing M.S. in Electrical Engineering at FAU (Expected 2028).",
+  "skills": {
+    "electrical_engineering": [
+      "Power Distribution (33/11/0.415 kV)",
+      "Overhead Lines",
+      "Substations",
+      "Switchgear",
+      "HSE Compliance",
+      "Preventive Maintenance",
+      "MAXIMO",
+      "GIS",
+      "AutoCAD"
+    ],
+    "data_and_tools": [
+      "Python",
+      "SQL",
+      "Power BI",
+      "Tableau",
+      "Excel",
+      "MSBI",
+      "Informatica"
+    ],
+    "soft_skills": [
+      "Leadership",
+      "Reporting",
+      "Process Optimization",
+      "Cross-Functional Collaboration"
+    ]
+  },
+  "experience": [
+    {
+      "title": "Electrical Engineer",
+      "company": "Al Ain Distribution Company",
+      "location": "Abu Dhabi, UAE",
+      "period": "2010 – 2023",
+      "bullets": [
+        "Ensured reliable 33/11/0.415 kV distribution network operations.",
+        "Led overhead line and substation maintenance with strong HSE compliance.",
+        "Used MAXIMO, GIS, and AutoCAD for asset tracking and planning.",
+        "Applied analytics for outage trends and preventive maintenance optimization.",
+        "Awarded Technical Performance Award (2014)."
+      ]
+    },
+    {
+      "title": "Electrical Engineer",
+      "company": "Ranya Contracting Establishment",
+      "location": "Abu Dhabi, UAE",
+      "period": "2007 – 2010",
+      "bullets": [
+        "Installed 33/11 kV overhead lines and 11 kV underground cables.",
+        "Commissioned 1500 KVA diesel generators.",
+        "Ensured compliance with electrical and safety standards."
+      ]
+    },
+    {
+      "title": "Executive Engineer (Electrical)",
+      "company": "Training Institute for Chemical Industries",
+      "location": "Bangladesh",
+      "period": "2004 – 2007",
+      "bullets": [
+        "Delivered training in Electrical & Electronic Technology.",
+        "Performed diagnostics and system performance analysis.",
+        "Created AutoCAD schematics and maintained equipment records."
+      ]
+    },
+    {
+      "title": "Teacher Assistant – TIESE",
+      "company": "Broward County Public Schools",
+      "location": "FL",
+      "period": "2024 – Present",
+      "bullets": [
+        "Support instructional delivery and digital learning tools.",
+        "Build dashboards for student performance tracking."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "M.S. Electrical Engineering",
+      "institution": "Florida Atlantic University",
+      "expected": "2028"
+    },
+    {
+      "degree": "Advanced Data Analytics Certificate",
+      "institution": "Broward College",
+      "completed": "Oct 2025"
+    },
+    {
+      "degree": "B.Sc. Electrical & Electronic Engineering",
+      "institution": "CUET, Bangladesh",
+      "completed": "March 1996"
+    }
+  ],
+  "awards": [
+    "Technical Performance Award (2014)",
+    "IEEE Member"
+  ],
+  "publications": [
+    {
+      "title": "High Impedance Fault Detection in 11 kV Overhead Line with Discrete Wavelet Transform and Independent Component Analysis",
+      "journal": "IJEECS",
+      "volume": "Vol. 24, No. 4, pp. 661-672",
+      "year": "2021",
+      "doi": "http://doi.org/10.11591/ijeecs.v24.i2.pp661-672"
+    }
+  ]
+}
