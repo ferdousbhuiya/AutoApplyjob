@@ -1,6 +1,6 @@
 # AutoApply — AI-Powered Resume & Cover Letter Builder
 
-> **Demo Video:** [Link to demo video](#) *(record and update before submission)*
+> **Demo Video:** [https://youtu.be/a3VRge-jrEo](https://youtu.be/a3VRge-jrEo)
 > **Live App:** [https://autoapplyjob-production.up.railway.app](https://autoapplyjob-production.up.railway.app)
 
 FAU HootCamp Week 3 assignment. AutoApply monitors Gmail for job-posting emails, uses Claude to extract job details and tailor a resume + cover letter, and saves the result as a **Gmail draft** for the user to review and send — nothing is auto-sent.
