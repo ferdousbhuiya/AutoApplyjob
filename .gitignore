@@ -37,6 +37,5 @@ coverage/
 *.db-wal
 *.db-shm
 
-# Client build output
-client/dist/
+# client/dist is committed so Railway doesn't need to build
 client/node_modules/

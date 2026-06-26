@@ -8,7 +8,7 @@
     "dev": "nodemon src/server.js",
     "test": "jest --testEnvironment=node",
     "client": "cd client && npm run dev",
-    "build": "cd client && npm run build"
+    "build": "echo 'Client dist already included in repo'"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.1",
