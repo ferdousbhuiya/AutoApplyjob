@@ -109,19 +109,20 @@ export default function JobCard({ job, onChange, onError }) {
   const busy = Boolean(loadingAction);
 
   return (
-    <div className="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+    <div className="rounded-2xl border border-white/10 shadow-xl hover:border-indigo-500/30 transition-all overflow-hidden"
+      style={{ background: 'linear-gradient(135deg, rgba(30,27,75,0.8) 0%, rgba(15,23,42,0.9) 100%)', backdropFilter: 'blur(10px)' }}>
       {/* Top accent bar based on fit score */}
-      <div className={`h-1 w-full ${job.fit_score != null ? colors.bar : 'bg-gray-200'}`} />
+      <div className={`h-1 w-full ${job.fit_score != null ? colors.bar : 'bg-slate-700'}`} />
 
       <div className="p-5">
         {/* Header row */}
         <div className="flex items-start gap-3 mb-4">
           <Avatar name={job.company} />
           <div className="flex-1 min-w-0">
-            <h3 className="font-bold text-gray-900 text-base leading-tight truncate">
+            <h3 className="font-bold text-white text-base leading-tight truncate">
               {job.job_title || 'Untitled Role'}
             </h3>
-            <p className="text-sm text-gray-500 mt-0.5">{job.company || 'Unknown Company'}</p>
+            <p className="text-sm text-slate-400 mt-0.5">{job.company || 'Unknown Company'}</p>
           </div>
 
           {/* Fit score badge */}
@@ -148,13 +149,14 @@ export default function JobCard({ job, onChange, onError }) {
 
         {/* Fit reason */}
         {job.fit_reason && (
-          <p className="text-sm text-gray-500 bg-gray-50 rounded-lg px-3 py-2 mb-4 border border-gray-100">
+          <p className="text-sm text-slate-300 rounded-xl px-3 py-2 mb-4 border border-white/10"
+            style={{ background: 'rgba(99,102,241,0.1)' }}>
             {job.fit_reason}
           </p>
         )}
 
         {/* Source + date */}
-        <div className="flex items-center gap-3 mb-4 text-xs text-gray-400">
+        <div className="flex items-center gap-3 mb-4 text-xs text-slate-500">
           <span className="flex items-center gap-1">
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -178,7 +180,8 @@ export default function JobCard({ job, onChange, onError }) {
           <button
             onClick={handleViewResume}
             disabled={busy}
-            className="flex-1 flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 disabled:opacity-50 transition"
+            className="flex-1 flex items-center justify-center gap-1.5 rounded-xl border border-white/10 px-3 py-2 text-sm text-slate-300 hover:text-white hover:border-indigo-500/50 disabled:opacity-50 transition"
+            style={{ background: 'rgba(255,255,255,0.05)' }}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -188,7 +191,8 @@ export default function JobCard({ job, onChange, onError }) {
           <button
             onClick={handleViewCoverLetter}
             disabled={busy}
-            className="flex-1 flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 disabled:opacity-50 transition"
+            className="flex-1 flex items-center justify-center gap-1.5 rounded-xl border border-white/10 px-3 py-2 text-sm text-slate-300 hover:text-white hover:border-indigo-500/50 disabled:opacity-50 transition"
+            style={{ background: 'rgba(255,255,255,0.05)' }}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -202,7 +206,8 @@ export default function JobCard({ job, onChange, onError }) {
           <button
             onClick={handleApprove}
             disabled={busy}
-            className="flex-1 flex items-center justify-center gap-1.5 rounded-lg bg-green-600 hover:bg-green-700 px-3 py-2 text-sm font-medium text-white disabled:opacity-50 shadow-sm transition"
+            className="flex-1 flex items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-sm font-bold text-white disabled:opacity-50 transition shadow-lg"
+            style={{ background: 'linear-gradient(135deg, #10b981, #059669)', boxShadow: '0 4px 12px rgba(16,185,129,0.3)' }}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -212,7 +217,8 @@ export default function JobCard({ job, onChange, onError }) {
           <button
             onClick={handleEdit}
             disabled={busy}
-            className="flex items-center justify-center gap-1.5 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 disabled:opacity-50 transition"
+            className="flex items-center justify-center gap-1.5 rounded-xl border border-white/10 px-3 py-2 text-sm text-slate-300 hover:text-white disabled:opacity-50 transition"
+            style={{ background: 'rgba(255,255,255,0.05)' }}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
@@ -222,7 +228,8 @@ export default function JobCard({ job, onChange, onError }) {
           <button
             onClick={handleSkip}
             disabled={busy}
-            className="flex items-center justify-center gap-1.5 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 disabled:opacity-50 transition"
+            className="flex items-center justify-center gap-1.5 rounded-xl border border-white/10 px-3 py-2 text-sm text-slate-300 hover:text-red-400 disabled:opacity-50 transition"
+            style={{ background: 'rgba(255,255,255,0.05)' }}
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -238,9 +245,11 @@ export default function JobCard({ job, onChange, onError }) {
       {/* Edit modal */}
       {editing && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 backdrop-blur-sm">
-          <div className="w-full max-w-2xl rounded-xl bg-white shadow-2xl overflow-hidden">
-            <div className="bg-gradient-to-r from-blue-600 to-blue-800 px-6 py-4 flex items-center justify-between">
-              <h2 className="text-white font-semibold">Edit Cover Letter</h2>
+          <div className="w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden border border-white/10"
+            style={{ background: 'linear-gradient(135deg, #1e1b4b, #0f172a)' }}>
+            <div className="px-6 py-4 flex items-center justify-between border-b border-white/10"
+              style={{ background: 'linear-gradient(135deg, #312e81, #1e1b4b)' }}>
+              <h2 className="text-white font-bold">Edit Cover Letter</h2>
               <button onClick={() => setEditing(false)} className="text-white/70 hover:text-white">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -249,20 +258,23 @@ export default function JobCard({ job, onChange, onError }) {
             </div>
             <div className="p-6">
               <textarea
-                className="h-72 w-full rounded-lg border border-gray-200 p-3 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"
+                className="h-72 w-full rounded-xl border border-white/10 p-3 text-sm text-slate-200 outline-none resize-none focus:border-indigo-500/50"
+                style={{ background: 'rgba(255,255,255,0.05)' }}
                 value={editedLetter}
                 onChange={(e) => setEditedLetter(e.target.value)}
               />
               <div className="mt-4 flex justify-end gap-2">
                 <button
                   onClick={() => setEditing(false)}
-                  className="rounded-lg border border-gray-300 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition"
+                  className="rounded-xl border border-white/10 px-4 py-2 text-sm text-slate-300 hover:text-white transition"
+                  style={{ background: 'rgba(255,255,255,0.05)' }}
                 >
                   Cancel
                 </button>
                 <button
                   onClick={handleSaveEdit}
-                  className="rounded-lg bg-blue-600 hover:bg-blue-700 px-4 py-2 text-sm font-medium text-white shadow-sm transition"
+                  className="rounded-xl px-4 py-2 text-sm font-bold text-white shadow-lg transition"
+                  style={{ background: 'linear-gradient(135deg, #6366f1, #4f46e5)' }}
                 >
                   Save Changes
                 </button>

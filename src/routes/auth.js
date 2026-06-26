@@ -39,6 +39,11 @@ router.get('/callback', async (req, res, next) => {
     const tokens = await gmailService.getTokenFromCode(code);
     setSetting('gmail_tokens', JSON.stringify(tokens));
 
+    try {
+      const email = await gmailService.getUserEmail(tokens);
+      if (email) setSetting('gmail_email', email);
+    } catch (_) {}
+
     res.redirect('/?gmail_connected=true');
   } catch (err) {
     next(err);
@@ -47,7 +52,8 @@ router.get('/callback', async (req, res, next) => {
 
 router.get('/status', (req, res) => {
   const tokens = getStoredTokens();
-  res.json({ connected: Boolean(tokens) });
+  const email = getSetting('gmail_email');
+  res.json({ connected: Boolean(tokens), email: email || null });
 });
 
 module.exports = router;

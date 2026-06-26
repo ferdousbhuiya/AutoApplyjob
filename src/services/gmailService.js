@@ -133,6 +133,12 @@ async function createDraft(tokens, to, subject, body) {
   return res.data;
 }
 
+async function getUserEmail(tokens) {
+  const gmail = getGmailClient(tokens);
+  const res = await gmail.users.getProfile({ userId: 'me' });
+  return res.data.emailAddress || null;
+}
+
 async function sendDraft(tokens, draftId) {
   const gmail = getGmailClient(tokens);
   const res = await gmail.users.drafts.send({
@@ -147,5 +153,6 @@ module.exports = {
   getTokenFromCode,
   fetchJobEmails,
   createDraft,
-  sendDraft
+  sendDraft,
+  getUserEmail
 };
