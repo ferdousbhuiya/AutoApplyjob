@@ -8,8 +8,9 @@ export default function ResumePreview({ resumeText, onClose }) {
       onClick={onClose}
     >
       <div
-        className="max-h-[88vh] w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden border border-white/10 flex flex-col"
-        style={{ background: 'linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)' }}
+        className="w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden border border-white/10 flex flex-col"
+        style={{ background: 'linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)', height: '88vh', maxHeight: '88vh' }}
+        style={{ background: 'linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)', height: '88vh', maxHeight: '88vh' }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
